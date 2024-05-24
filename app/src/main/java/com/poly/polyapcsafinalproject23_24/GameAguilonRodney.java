@@ -1,5 +1,7 @@
 package com.poly.polyapcsafinalproject23_24;
 
+import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,104 +35,93 @@ public class GameAguilonRodney extends GameActivity {
         btn3 = findViewById(R.id.btn_3);
         btn4 = findViewById(R.id.btn_4);
 
-        tvTile.setText()
+        tvTitle.setText("Deadly Virus");
+        tvSubtitle.setText("High School Edition");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //initialize number of lives
-        numLives = 5;
+        numLives = 4;
+        start();
+    }
+    //initialize number of lives
+    private void setAllBtnsVisible()
+    {
+        btn1.setVisibility(View.VISIBLE);
+        btn2.setVisibility(View.VISIBLE);
+        btn3.setVisibility(View.VISIBLE);
+    }
 
         //create a player object (optional)
         //player = new Player(...)
 
         //display project title and description
-        System.out.println("\nDeadly Virus Disaster Survival - Student Edition");
-
-        System.out.println("Welcome to my game and today we will do our best to servive in this game live or die by choosing a serise of choices");
-        System.out.println();
-        start();
-    }
-    private void start()
-    {
-        //start adventure here
-
-        //create an Adventure object
-
-        System.out.println("\nWhere would you like to go?");
-        System.out.println("1. Go to the store\n2. Go to go outside\n3. stay home");
-
-        if (choice == 1)
+        public void start()
         {
-            goToStore();
-        }
-        else if (choice == 2)
-        {
-            goOutside();
-        }
-        else if (choice == 3)
-        {
-            stayHome();
-        }
+            isWon = false;
 
-    }
+            ivStory.setImageResource(R.drawable.im_laborday_title);
+            playAudio(R.raw.audio_laborday_bass);
+
+         tvStoryText.setText("Welcome to my game and today we will do our best to sirvive in this game live or die by choosing a series of choices Sooooooo Where would you like to start?");
+            setAllBtnsVisible();
+
+            btn1.setText("Go to the store");
+            btn2.setText("Go to go outside ");
+            btn3.setText("stay home");
+            btn4.setVisibility(View.INVISIBLE);
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goToStore();
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goOutside();
+                }
+            });
+
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { stayHome();}
+            });
+
+
+        }
 
 
     private void goToStore()
     {
-        System.out.println("You hear the alarms the infected are coming!!!!!!");
-        System.out.println("\nWhat will you like to do at the store?");
-        System.out.println("1. Loot Up And dip\n2. camp up");
+        tvStoryText.setText("You hear the alarms the infected are coming!!!!!! What will you like to do at the store? ");
 
-        if (choice == 1)
-        {
-            lootAndDip();
-        }
-        else if (choice == 2)
-        {
-            campUp();
-        }
+        setAllBtnsVisible();
+        btn1.setText("Loot Up And dip");
+        btn2.setText("camp up");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {lootAndDip();}
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                campUp();
+            }
+        });
     }
-
 
 
     private void lootAndDip()
     {
-        System.out.println("\nYou need to get home, what do you do?");
+        tvStoryText.setText("You need to get home, what do you do?");
         System.out.println("1. Go home in a car\n2. Go home on foot running");
 
-        if (choice == 1)
-        {
-            goHomeDriving();
-        }
-        else if (choice == 2)
-        {
-            goHomeRunning();
-        }
-    }
+        btn1.setText("Go home in a car");
+        btn2.setText("Go home on foot running");
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
 
     private void goHomeDriving()
     {
@@ -587,30 +578,46 @@ public class Adventure{
 
 
 
-    private void defeat()
+    private void end()
     {
-        //run method when defeated
-
-
-
-        //lose a life
-        numLives--;
-
-
-        //clear console, display text, etc
-        System.out.println("Are you gonna give up that easy well too bad cause you getting up cause i said so come on!!!!!");
-
-        //determine if player gets to play again
-        if (numLives > 0)
+        if (isWon)
         {
-            //if you still have lives, return to start()
-            start();
+            tvStoryText.setText("You had enough water for rescuers to find and resue you....so YOU WIN!!!!!!\"");
 
+            ivStory.setImageResource(R.drawable.im_laborday_miracle);
         }
         else
         {
-            //print game over message
-            System.out.println("GAME OVER");
+            numLives--;
+            String text = "You wasted a life with that dicision. You have " + numLives + " years remaining";
+            tvStoryText.setText(text);
+        }
+
+        if (numLives > 0)
+        {
+            btn1.setText("Play again!");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    start();
+                }
+            });
+        }
+        else
+        {
+            tvStoryText.setText("High school is over. Permenant Game over.");
+            btn1.setText("Back to menu");
+
+            ivStory.setImageResource(R.drawable.im_laborday_high_school_over);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(GameLaborDayAdventure.this, MainActivity.class));
+                }
+            });
         }
     }
+
+
 }

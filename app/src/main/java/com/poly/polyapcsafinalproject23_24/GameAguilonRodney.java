@@ -350,6 +350,3 @@ public class GameAguilonRodney extends GameActivity {
             });
         }
     }
-
-
-}

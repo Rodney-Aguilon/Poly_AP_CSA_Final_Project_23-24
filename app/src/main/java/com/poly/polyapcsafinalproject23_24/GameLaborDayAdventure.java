@@ -126,7 +126,6 @@ public class GameLaborDayAdventure extends GameActivity {
         btn2.setText("Punch it in the nose");
         btn3.setVisibility(View.INVISIBLE);
         btn4.setVisibility(View.INVISIBLE);
-z
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,7 +176,7 @@ z
         btn1.setText("Next");
         btn2.setVisibility(View.INVISIBLE);
         btn3.setVisibility(View.INVISIBLE);
-        btn4.setVisibility(View.);
+        btn4.setVisibility(View.INVISIBLE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

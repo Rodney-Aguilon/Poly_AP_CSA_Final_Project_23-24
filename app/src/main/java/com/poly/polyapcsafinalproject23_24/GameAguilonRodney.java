@@ -89,6 +89,8 @@ public class GameAguilonRodney extends GameActivity {
 
     private void goToStore()
     {
+        ivStory.setImageResource(R.drawable.im_laborday_title);
+
         tvStoryText.setText("You hear the alarms the infected are coming!!!!!! What will you like to do at the store? ");
 
         setAllBtnsVisible();

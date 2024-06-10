@@ -134,7 +134,20 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.to_many_cars_in_the_way_and_got_infected_you_died_you_lose);
         tvStoryText.setText("To many cars in the way and got infected you died YOU LOSE!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
     private void goHomeRunning()
     {
@@ -167,14 +180,40 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.you_fight_people_back_and_you_were_able_to_last_with_the_stores_food_supply_you_win);
         tvStoryText.setText(" You fight people back and you were able to last with the stores food supply YOU WIN!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
     private void letThemIn()
     {
         ivStory.setImageResource(R.drawable.one_infected);
         tvStoryText.setText(" One person was infected and you were infected and died YOU LOSE!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
     private void goOutSide()
@@ -225,14 +264,40 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.you_took_on_a_large_sum_of_people_and_built_a_large_army_of_infected_zombies_and_nobody_could_stop_you);
         tvStoryText.setText("You took a large sum of people and built a large army of infected people and nobody could stop you YOU WINN!!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
     private void goToPark()
     {
         ivStory.setImageResource(R.drawable.multiple_people_had_spotted_your_army_and_alerted_the_military_and_your_army_was_shot_down_by_infected_zombies);
         tvStoryText.setText("Multiple people had spotted your army and alerted the military and your army was shot down YOU LOSE!!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
 
@@ -262,14 +327,40 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.the_city_started_to_fight_back_the_infected_and_you_ended_up_dying);
         tvStoryText.setText("The city started to fight back and you ended up dying YOU LOSE!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
     private void goToNeighborhood()
     {
         ivStory.setImageResource(R.drawable.you_ended_up_sneaking_up_on_unsuspecting_people_with_your_infected_zombies_and_grew_bigger_well_done);
         tvStoryText.setText("You ended up sneaking up on unsuspecting people and grew bigger well done YOU WIN!!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
 
@@ -321,13 +412,39 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.imagine_you_had_no_power_to_do_anything_but_were_able_to_live_but_had_lost_everything_you_owned_and_won_t_be_able_to_recover_from_this);
         tvStoryText.setText("You had no power to do anything but was able to live but had lost everything you owned an won't be able to recover from this You lose!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
     private void putTraps ()
     {
         ivStory.setImageResource(R.drawable.you_were_able_to_keep_yourself_save_you_live_another_day);
         tvStoryText.setText("You were able to keep yourself save You live another day!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
     private void hideInBasement ()
     {
@@ -354,13 +471,39 @@ public class GameAguilonRodney extends GameActivity {
     {
         ivStory.setImageResource(R.drawable.hiding_in_a_basement_you_had_no_water_you_sleep_in_three_days);
         tvStoryText.setText("Since you had no water you died in three days soo YOU LOSE!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
     private void waterAndMeds()
     {
         ivStory.setImageResource(R.drawable.rescuers_came_to_save_you_out_of_a_basement);
         tvStoryText.setText("You live since you can only live on water for 3 day and no need for food up since you can not eat up to three weeks you had enough water for rescuers to make it to YOU WIN!!!!!!");
-        end();
+        setAllBtnsVisible();
+        btn1.setText("Next");
+        btn2.setVisibility(View.INVISIBLE);
+        btn3.setVisibility(View.INVISIBLE);
+        btn4.setVisibility(View.INVISIBLE);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                end();
+            }
+        });
+
+
     }
 
 
@@ -374,7 +517,7 @@ public class GameAguilonRodney extends GameActivity {
         else
         {
             numLives--;
-            String text = "You wasted a life with that decision. You have " + numLives + " years remaining";
+            String text = "your life is over but you should still continue. You have " + numLives + " years remaining";
             tvStoryText.setText(text);
         }
 

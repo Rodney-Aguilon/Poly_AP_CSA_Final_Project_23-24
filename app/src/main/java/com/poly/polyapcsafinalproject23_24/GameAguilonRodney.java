@@ -65,7 +65,7 @@ public class GameAguilonRodney extends GameActivity {
 
             btn1.setText("Go to the store");
             btn2.setText("Go outside ");
-            btn3.setText("stay home");
+            btn3.setText("Stay home");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -94,8 +94,8 @@ public class GameAguilonRodney extends GameActivity {
         tvStoryText.setText("You hear the alarms the infected are coming!!!!!! What will you like to do at the store? ");
 
         setAllBtnsVisible();
-        btn1.setText("Loot Up And dip");
-        btn2.setText("camp up");
+        btn1.setText("Loot up and dip");
+        btn2.setText("Set up camp ");
         btn3.setVisibility(View.INVISIBLE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -246,7 +246,7 @@ public class GameAguilonRodney extends GameActivity {
         tvStoryText.setText("So you took the large group with you and now start plotting the next move\nTake large group to where?");
         setAllBtnsVisible();
         btn1.setText("Go to the mall");
-        btn2.setText("Go to the Park");
+        btn2.setText("Go to the park");
         btn3.setVisibility(View.INVISIBLE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -304,11 +304,11 @@ public class GameAguilonRodney extends GameActivity {
     private void infectSmallGroup()
     {
         ivStory.setImageResource(R.drawable.you_need_to_grow_stronger_as_an_infected_zombie);
-        tvStoryText.setText("you need to grow stronger where are you going?\nTake small group infected people to city\nTake small group infected people to neighborhood");
+        tvStoryText.setText("You need to grow stronger where are you going?\nTake small group infected people to city\nTake small group infected people to neighborhood");
 
         setAllBtnsVisible();
         btn1.setText("Go to the city");
-        btn2.setText("Go to the Neighborhood");
+        btn2.setText("Go to the neighborhood");
         btn3.setVisibility(View.INVISIBLE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -370,8 +370,8 @@ public class GameAguilonRodney extends GameActivity {
         tvStoryText.setText("You are scared and unable to think of what to do so you stay home\nSet up defence to prevent looters or Use what you have hide in basement");
 
         setAllBtnsVisible();
-        btn1.setText("set Up Looter");
-        btn2.setText("Go to the Park");
+        btn1.setText("Set up looter");
+        btn2.setText("Go to the park");
         btn3.setVisibility(View.INVISIBLE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -389,10 +389,10 @@ public class GameAguilonRodney extends GameActivity {
     private void setUpLooter()
     {
         ivStory.setImageResource(R.drawable.imagine_you_are_scared_and_unable_to_think_of_what_to_do_so_you_stay_home_set_up_defence_to_prevent_looters_or_use_what_you_have_hide_in_basement);
-        tvStoryText.setText("you dont have much time\nwill you choose to put video-cams\nwill you set up traps to protect yourself hope to god you live");
+        tvStoryText.setText("You dont have much time\nwill you choose to put video-cams\nwill you set up traps to protect yourself hope to god you live");
         setAllBtnsVisible();
         btn1.setText("Put videoCams");
-        btn2.setText("Put Traps");
+        btn2.setText("Put traps");
         btn3.setVisibility(View.INVISIBLE);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -449,10 +449,10 @@ public class GameAguilonRodney extends GameActivity {
     private void hideInBasement ()
     {
         ivStory.setImageResource(R.drawable.imagine_you_need_to_stay_chilly_but_theres_only_two_thing_you_can_take_food_and_clothes_or_water_and_meds);
-        tvStoryText.setText("you need to stay chilly but theres only two thing you can take food and clothes or water and meds");
+        tvStoryText.setText("You need to stay chilly but theres only two thing you can take food and clothes or water and meds");
         setAllBtnsVisible();
         btn1.setText("Take food and clothes");
-        btn2.setText("Take Water and meds");
+        btn2.setText("Take water and meds");
         btn3.setVisibility(View.INVISIBLE);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -510,14 +510,14 @@ public class GameAguilonRodney extends GameActivity {
     private void end()
     {
         if (isWon) {
-            tvStoryText.setText("You finally beat the game so now carry this knowledge to the real world buddy Goodluck");
+            tvStoryText.setText("You finally beat the game so now carry this knowledge to the real world buddy goodluck");
 
             ivStory.setImageResource(R.drawable.im_laborday_miracle);
         }
         else
         {
             numLives--;
-            String text = "your life is over but you should still continue. You have " + numLives + " years remaining";
+            String text = "Your life is over but you should still continue. You have " + numLives + " years remaining";
             tvStoryText.setText(text);
         }
 
@@ -534,7 +534,7 @@ public class GameAguilonRodney extends GameActivity {
             });
         } else {
             ivStory.setImageResource(R.drawable.permanent_game_over);
-            tvStoryText.setText("everything has died. Permanent Game over.");
+            tvStoryText.setText("Everything has died. Permanent Game over.");
             btn1.setText("Back to menu");
             btn2.setVisibility(View.INVISIBLE);
             btn3.setVisibility(View.INVISIBLE);
